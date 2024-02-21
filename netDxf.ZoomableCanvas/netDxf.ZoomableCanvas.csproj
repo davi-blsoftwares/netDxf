@@ -83,11 +83,5 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\netDxf\netDxf.csproj">
-      <Project>{ab0b1738-826f-41bf-acd0-92bb9421b48b}</Project>
-      <Name>netDxf</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

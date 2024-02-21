@@ -424,6 +424,8 @@ namespace netDxf.Blocks
             get { return this.end; }
         }
 
+        public virtual bool HasChildren { get { return (entities != null && entities.Count > 0); } }
+
         #endregion
 
         #region public methods

@@ -270,6 +270,8 @@ namespace netDxf.Entities
 
         #region public properties
 
+        public double AxisRatio { get { return MinorAxis / MajorAxis; } }
+
         /// <summary>
         /// Gets or sets the ellipse <see cref="Vector3">center</see> in world coordinates.
         /// </summary>
