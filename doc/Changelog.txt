@@ -1,5 +1,10 @@
 ## Change history
 
+### [3.0.2 - 2024/02/23]
+*Added new project ZoomableCanvas to preview dxf
+*Added new project netDxf DxfViwer
+
+
 ### [3.0.1 - 2023/10/11]
 
 [2023/08/31]

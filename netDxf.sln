@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netDxf.ConversionToShape", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netDxf.DXFViewer", "netDxf.DXFViewer\netDxf.DXFViewer.csproj", "{2F47A86F-FFD2-4EE0-97B7-27817D7DC675}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netDxf.ViewerTest", "netDxf.ViewerTest\netDxf.ViewerTest.csproj", "{3AC1639B-5980-465D-9CDC-DD316A746026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{2F47A86F-FFD2-4EE0-97B7-27817D7DC675}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F47A86F-FFD2-4EE0-97B7-27817D7DC675}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F47A86F-FFD2-4EE0-97B7-27817D7DC675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC1639B-5980-465D-9CDC-DD316A746026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC1639B-5980-465D-9CDC-DD316A746026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC1639B-5980-465D-9CDC-DD316A746026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC1639B-5980-465D-9CDC-DD316A746026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

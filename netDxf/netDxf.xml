@@ -11852,6 +11852,16 @@
             Drawing code page; set to the system code page when a new drawing is created, but not otherwise maintained by AutoCAD.
             </summary>
         </member>
+        <member name="F:netDxf.Header.HeaderVariableCode.ExtMax">
+            <summary>
+            X, Y, and Z drawing extents upper-right corner (in WCS)
+            </summary>
+        </member>
+        <member name="F:netDxf.Header.HeaderVariableCode.ExtMin">
+            <summary>
+            X, Y, and Z drawing extents lower-left corner (in WCS)
+            </summary>
+        </member>
         <member name="F:netDxf.Header.HeaderVariableCode.Extnames">
             <summary>
             Controls symbol table naming.
@@ -12134,6 +12144,22 @@
             <summary>
             Drawing code page; set to the system code page when a new drawing is created, but not otherwise maintained by AutoCAD.
             </summary>
+        </member>
+        <member name="P:netDxf.Header.HeaderVariables.ExtMax">
+            <summary>
+            Point for drawing extents upper-right corner (in WCS
+            </summary>
+            <remarks>
+            When you insert or externally reference the current drawing into other drawings, this base point is used as the insertion base point.
+            </remarks>
+        </member>
+        <member name="P:netDxf.Header.HeaderVariables.ExtMin">
+            <summary>
+            Point for drawing extents  lower-left corner (in WCS
+            </summary>
+            <remarks>
+            When you insert or externally reference the current drawing into other drawings, this base point is used as the insertion base point.
+            </remarks>
         </member>
         <member name="P:netDxf.Header.HeaderVariables.Extnames">
             <summary>
