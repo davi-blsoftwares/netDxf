@@ -136,6 +136,16 @@ namespace netDxf.Header
         public const string DwgCodePage = "$DWGCODEPAGE";
 
         /// <summary>
+        /// X, Y, and Z drawing extents upper-right corner (in WCS)
+        /// </summary>
+        public const string ExtMax = "$EXTMAX";
+
+        /// <summary>
+        /// X, Y, and Z drawing extents lower-left corner (in WCS)
+        /// </summary>
+        public const string ExtMin = "$EXTMIN";
+
+        /// <summary>
         /// Controls symbol table naming.
         /// </summary>
         /// <remarks>
@@ -277,6 +287,6 @@ namespace netDxf.Header
         /// <summary>
         /// Direction of the current UCS Y axis (in WCS).
         /// </summary>
-        public const string UcsYDir = "$UCSYDIR";
+        public const string UcsYDir = "$UCSYDIR";        
     }
 }

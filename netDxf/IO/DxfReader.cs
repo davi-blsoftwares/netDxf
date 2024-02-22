@@ -549,6 +549,12 @@ namespace netDxf.IO
                         this.doc.DrawingVariables.DwgCodePage = this.chunk.ReadString();
                         this.chunk.Next();
                         break;
+                    case HeaderVariableCode.ExtMax:
+                        this.doc.DrawingVariables.ExtMax = this.ReadHeaderVector();
+                        break;
+                    case HeaderVariableCode.ExtMin:
+                        this.doc.DrawingVariables.ExtMin = this.ReadHeaderVector();
+                        break;
                     case HeaderVariableCode.Extnames:
                         this.doc.DrawingVariables.Extnames = this.chunk.ReadBool();
                         this.chunk.Next();

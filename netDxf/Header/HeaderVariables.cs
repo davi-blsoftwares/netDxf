@@ -79,6 +79,8 @@ namespace netDxf.Header
                 {HeaderVariableCode.LUprec, new HeaderVariable(HeaderVariableCode.LUprec, 70, (short) 4)},
                 {HeaderVariableCode.MirrText, new HeaderVariable(HeaderVariableCode.MirrText, 70, false)},
                 {HeaderVariableCode.Extnames, new HeaderVariable(HeaderVariableCode.Extnames, 290, true)},
+                {HeaderVariableCode.ExtMax, new HeaderVariable(HeaderVariableCode.ExtMax, 10, Vector3.Zero)},
+                {HeaderVariableCode.ExtMin, new HeaderVariable(HeaderVariableCode.ExtMin, 10, Vector3.Zero)},
                 {HeaderVariableCode.InsBase, new HeaderVariable(HeaderVariableCode.InsBase, 10, Vector3.Zero)},
                 {HeaderVariableCode.InsUnits, new HeaderVariable(HeaderVariableCode.InsUnits, 70, DrawingUnits.Unitless)},
                 {HeaderVariableCode.LtScale, new HeaderVariable(HeaderVariableCode.LtScale, 40, 1.0)},
@@ -399,6 +401,30 @@ namespace netDxf.Header
         {
             get { return (string) this.variables[HeaderVariableCode.DwgCodePage].Value; }
             internal set { this.variables[HeaderVariableCode.DwgCodePage].Value = value; }
+        }
+
+        /// <summary>
+        /// Point for drawing extents upper-right corner (in WCS
+        /// </summary>
+        /// <remarks>
+        /// When you insert or externally reference the current drawing into other drawings, this base point is used as the insertion base point.
+        /// </remarks>
+        public Vector3 ExtMax
+        {
+            get { return (Vector3)this.variables[HeaderVariableCode.ExtMax].Value; }
+            set { this.variables[HeaderVariableCode.ExtMax].Value = value; }
+        }
+
+        /// <summary>
+        /// Point for drawing extents  lower-left corner (in WCS
+        /// </summary>
+        /// <remarks>
+        /// When you insert or externally reference the current drawing into other drawings, this base point is used as the insertion base point.
+        /// </remarks>
+        public Vector3 ExtMin
+        {
+            get { return (Vector3)this.variables[HeaderVariableCode.ExtMin].Value; }
+            set { this.variables[HeaderVariableCode.ExtMin].Value = value; }
         }
 
         /// <summary>
