@@ -14291,6 +14291,51 @@
             </para>
             </remarks>
         </member>
+        <member name="M:netDxf.Objects.ImageDefinition.#ctor(System.String)">
+             <summary>
+             Initializes a new instance of the <c>ImageDefinition</c> class. Only available for Net Framework 4.5 builds.
+             </summary>
+             <param name="file">Image file name with full or relative path.</param>
+            <remarks>
+             <para>
+             The name of the file without extension will be used as the name of the image definition.
+             </para>
+             <para>
+             Supported image formats: BMP, JPG, PNG, TIFF.<br />
+             Even thought AutoCAD supports more image formats, this constructor is restricted to the ones the net framework supports in common with AutoCAD.
+             Use the generic constructor instead.
+             </para>
+             <para>
+             Note (this is from the ACAD docs): AutoCAD 2000, AutoCAD LT 2000, and later releases do not support LZW-compressed TIFF files,
+             with the exception of English language versions sold in the US and Canada.<br />
+             If you have TIFF files that were created using LZW compression and want to insert them into a drawing 
+             you must save the TIFF files with LZW compression disabled.
+             </para>
+            </remarks>
+        </member>
+        <member name="M:netDxf.Objects.ImageDefinition.#ctor(System.String,System.String)">
+             <summary>
+             Initializes a new instance of the <c>ImageDefinition</c> class. Only available for Net Framework 4.5 builds.
+             </summary>
+            <param name="name">Image definition name.</param>
+            <param name="file">Image file name with full or relative path.</param>
+            <remarks>
+             <para>
+             The name assigned to the image definition must be unique.
+             </para>
+             <para>
+             Supported image formats: BMP, JPG, PNG, TIFF.<br />
+             Even thought AutoCAD supports more image formats, this constructor is restricted to the ones the .net library supports in common with AutoCAD.
+             Use the generic constructor instead.
+             </para>
+             <para>
+             Note (this is from the ACAD docs): AutoCAD 2000, AutoCAD LT 2000, and later releases do not support LZW-compressed TIFF files,
+             with the exception of English language versions sold in the US and Canada.<br />
+             If you have TIFF files that were created using LZW compression and want to insert them into a drawing 
+             you must save the TIFF files with LZW compression disabled.
+             </para>
+            </remarks>
+        </member>
         <member name="P:netDxf.Objects.ImageDefinition.File">
             <summary>
             Gets or sets the image file.
@@ -18436,6 +18481,14 @@
             Gets the owner of the actual text style.
             </summary>
         </member>
+        <member name="M:netDxf.Tables.TextStyle.TrueTypeFontFamilyName(System.String)">
+            <summary>
+            Find the font family name of an specified TTF font file. Only available for Net Framework 4.5 builds.
+            </summary>
+            <param name="ttfFont">TTF font file.</param>
+            <returns>The font family name of the specified TTF font file.</returns>
+            <remarks>This method will return an empty string if the specified font is not found in its path or the system font folder or if it is not a valid TTF font.</remarks>
+        </member>
         <member name="M:netDxf.Tables.TextStyle.HasReferences">
             <summary>
             Checks if this instance has been referenced by other DxfObjects. 
@@ -20801,85 +20854,6 @@
         <member name="F:netDxf.XDataCode.WorldDirectionY">
             <summary>
             Also a 3D point that is rotated and mirrored along with the parent (but is not moved, scaled, or stretched)
-            </summary>
-        </member>
-        <member name="F:netDxf.XDataCode.WorldDirectionZ">
-            <summary>
-            Also a 3D point that is rotated and mirrored along with the parent (but is not moved, scaled, or stretched)
-            </summary>
-        </member>
-        <member name="F:netDxf.XDataCode.Real">
-            <summary>
-            A real value.
-            </summary>
-        </member>
-        <member name="F:netDxf.XDataCode.Distance">
-            <summary>
-            A real value that is scaled along with the parent entity
-            </summary>
-        </member>
-        <member name="F:netDxf.XDataCode.ScaleFactor">
-            <summary>
-            Also a real value that is scaled along with the parent.
-            The difference between a distance and a scale factor is application-defined
-            </summary>
-        </member>
-        <member name="F:netDxf.XDataCode.Int16">
-            <summary>
-            A 16-bit integer (signed or unsigned).
-            </summary>
-        </member>
-        <member name="F:netDxf.XDataCode.Int32">
-            <summary>
-            A 32-bit signed integer.
-            </summary>
-        </member>
-        <member name="T:netDxf.XDataRecord">
-            <summary>
-            Represents an entry in the extended data of an entity.
-            </summary>
-        </member>
-        <member name="P:netDxf.XDataRecord.OpenControlString">
-            <summary>
-            An extended data control string can be either "{"or "}".
-            These braces enable applications to organize their data by subdividing the data into lists.
-            The left brace begins a list, and the right brace terminates the most recent list. Lists can be nested.
-            </summary>
-        </member>
-        <member name="P:netDxf.XDataRecord.CloseControlString">
-            <summary>
-            An extended data control string can be either "{" or "}".
-            These braces enable applications to organize their data by subdividing the data into lists.
-            The left brace begins a list, and the right brace terminates the most recent list. Lists can be nested.
-            </summary>
-        </member>
-        <member name="M:netDxf.XDataRecord.#ctor(netDxf.XDataCode,System.Object)">
-            <summary>
-            Initializes a new XDataRecord.
-            </summary>
-            <param name="code">XData code.</param>
-            <param name="value">XData value.</param>
-        </member>
-        <member name="P:netDxf.XDataRecord.Code">
-            <summary>
-            Gets the XData code.
-            </summary>
-            <remarks>The only valid values are the ones defined in the <see cref="T:netDxf.XDataCode">XDataCode</see> class.</remarks>
-        </member>
-        <member name="P:netDxf.XDataRecord.Value">
-            <summary>
-            Gets the XData value.
-            </summary>
-        </member>
-        <member name="M:netDxf.XDataRecord.ToString">
-            <summary>
-            Obtains a string that represents the XDataRecord.
-            </summary>
-            <returns>A string text.</returns>
-        </member>
-    </members>
-</doc>
-along with the parent (but is not moved, scaled, or stretched)
             </summary>
         </member>
         <member name="F:netDxf.XDataCode.WorldDirectionZ">
